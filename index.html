@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Want to check out this file?</h2>
+        <h3>Sign up or Log in</h3>
+        <button onclick="window.location.href='/login-google'">Continue with Google</button>
+        <p>or</p>
+        <form action="/submit-login" method="post">
+            <input type="text" id="email" placeholder="Email" required>
+            <br>
+            <input type="password" id="password" placeholder="Password" required>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+        <br>
+        <a href="/create-account">Create account</a>
+        <p>By clicking "Create account" or "Continue with Google", you agree to the Figma TOS and Privacy Policy.</p>
+        <a href="/login">Already have an account? Log in</a>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
