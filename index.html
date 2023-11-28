@@ -4,25 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title><link rel="stylesheet" href="style.css">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
 </head>
 <body>
-    <div class="login-container">
-        <h2>Want to check out this file?</h2>
-        <h3>Sign up or Log in</h3>
-        <button onclick="window.location.href='/login-google'">Continue with Google</button>
-        <p>or</p>
-        <form action="/submit-login" method="post">
-            <input type="text" id="email" placeholder="Email" required>
-            <br>
-            <input type="password" id="password" placeholder="Password" required>
-            <br>
-            <input type="submit" value="Submit">
-        </form>
-        <br>
-        <a href="/create-account">Create account</a>
-        <p>By clicking "Create account" or "Continue with Google", you agree to the Figma TOS and Privacy Policy.</p>
-        <a href="/login">Already have an account? Log in</a>
+    <div class="wrapper">
+
+        <div class="form-box login">
+            <h2>Want to check out this file?</h2>
+        
+            <h3>Sign up or Log in</h3>
+        
+            <button id="googleSignInButton" onclick="startGoogleSignIn()">Continue with Google</button>
+        
+            <p>or</p>
+
+            <form action="#" method="post">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" id="email" required>
+                    <label>Email</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" id="password" required>
+                    <label> Password</label>
+                </div>
+
+                <div class="remember-forgot">
+                    <label><input type="checkbox">Remember me</label>
+                    <a href="#">Forget Password?</a>
+                </div>
+
+                <button type="submit" class="btn">Login</button>
+            </form>
+
+            <div class="login-register">
+                <p> Don't have an account? <a href="#" class="register-link">Create account</a>
+            </div>
+        
+            <p class="create">By clicking "Create account" or "Continue with Google", you agree to the Figma TOS and Privacy Policy.</p>
+        
+            <!-- <div class="login-register">
+                <p> Already have an account? <a href="#" class="login-link">Login</a>
+            </div>                                  -->
+        </div>
+
+        <!-- register-link        -->
+
+        <div class="form-box register">
+            <h2>Registration</h2>
+        
+            <button id="googleSignInButton" onclick="startGoogleSignIn()">Continue with Google</button>
+        
+            <p>or</p>
+
+            <form action="#" method="post">
+
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <input type="text" id="text" required>
+                    <label>Username</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" id="email" required>
+                    <label>Email</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" id="password" required>
+                    <label> Password</label>
+                </div>
+
+                <br>
+
+                <div class="remember-forgot2">
+                    <label><input type="checkbox">I agree to the terms & conditions</label>
+                </div>
+
+                <button type="submit" class="btn">Save</button>
+            </form>
+
+            <div class="login-register">
+                <p> Already have an account? <a href="#" class="login-link">Login</a>
+            </div>
+        
+            <!-- <p class="create">By clicking "Create account" or "Continue with Google", you agree to the Figma TOS and Privacy Policy.</p>-->
+        
+            <!-- <p class="register-link"> Already have an account? <a href="#" class="login">Log in</a> </p> -->
     </div>
-    <script src="index.js"></script>
+        <script src="index.js"></script>
+    
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
 </body>
 </html>
